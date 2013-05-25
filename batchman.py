@@ -30,6 +30,7 @@ from sendr import package
 
 # the crazy bit
 def make_recvr(mod):
+	# generate bytecode for mod.__run__(x=1)
 	bytecode = (package(mod, {"x":1}));
 	client_cmd=open("recvr.py", "r").read()
 	client_cmd = client_cmd.replace("\n", "")
