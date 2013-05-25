@@ -5,7 +5,7 @@ Hadoop clusters are expensive. They need taking care of, funding and occasionall
 
 But I had a big-data problem, no funding and even more importantly no ops staff.
 
-I need to crawl approximately 2 Tb of log files spread across 600 web nodes and everytime I was looking for something different.
+I needed to crawl approximately 2 Tb of log files every day spread across 600 web nodes and everytime I was looking for something different. And I always needed results immediately.
 
 There were some things which were going my way, thankfully. 
 
