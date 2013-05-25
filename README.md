@@ -28,3 +28,5 @@ But this was never about practicalities was it?
 To test this, make sure you have `ssh -v localhost` working with your ssh-agent (without passwords).
 
 Check your keys loaded with `ssh-agent -l` and run `python batchman.py ips` which should print something useless like the file listing of /var/log/ and the python executable path.
+
+Or if you're one of those people who want to see how python bytecode works `python sendr.py | python recvr.py` will do that without involving ssh.
