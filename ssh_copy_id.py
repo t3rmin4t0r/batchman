@@ -20,7 +20,7 @@ def timecheck(h):
 		mkdir -p ~/.ssh ; 
 		chmod 0600 ~/.ssh/; 
 		echo '%s' >> ~/.ssh/authorized_keys; 
-		chmod 0600 ~/.ssh/*""" % (open(expanduser("~/.ssh/authorized_keys")).read())
+		chmod 0700 ~/.ssh/*""" % (open(expanduser("~/.ssh/authorized_keys")).read())
 	s = SSHClient()
 	print "> %s" % (h,)
 	s.set_missing_host_key_policy(AutoAddPolicy())
