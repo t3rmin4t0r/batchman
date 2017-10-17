@@ -25,7 +25,7 @@ def timecheck(h):
 	print "> %s" % (h,)
 	s.set_missing_host_key_policy(AutoAddPolicy())
 	if pwd: 
-		s.connect(hostname=h[1], username=h[0]), password=pwd)
+		s.connect(hostname=h[1], username=h[0], password=pwd)
 	else:
 		s.connect(hostname=h[1], username=h[0])#, password='')
 	(_in, _out, _err) = s.exec_command( cmd, bufsize=4096)
