@@ -12,7 +12,7 @@ def readhosts(f):
 	return nousers+users
 
 hosts = readhosts(sys.argv[1])
-
+pwd = ((len(sys.argv) == 3) and sys.argv[2]) or None
 #logging.basicConfig(level=logging.DEBUG)
 
 def timecheck(h):
@@ -24,7 +24,10 @@ def timecheck(h):
 	s = SSHClient()
 	print "> %s" % (h,)
 	s.set_missing_host_key_policy(AutoAddPolicy())
-	s.connect(hostname=h[1], username=h[0])#, password='')
+	if pwd: 
+		s.connect(hostname=h[1], username=h[0]), password=pwd)
+	else:
+		s.connect(hostname=h[1], username=h[0])#, password='')
 	(_in, _out, _err) = s.exec_command( cmd, bufsize=4096)
 	print "< %s" % (h,)
 	return (h,_out.read())
